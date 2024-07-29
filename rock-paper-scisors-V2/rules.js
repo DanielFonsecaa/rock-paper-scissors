@@ -19,11 +19,10 @@ const winConditions = {
 }
 
 const playgame = function (){
-const handP1 = player1Hand();
-const handP2 = player2Hand();
-
-determineWinner(handP1,handP2);
-
+  const handP1 = player1Hand();
+  const handP2 = player2Hand();
+  
+  determineWinner(handP1,handP2);
 };
 
 const player1Hand = () => {
@@ -44,12 +43,10 @@ const determineWinner = function(handP1, handP2){
   }
   else if(winConditions[handP1] === handP2){
     p1wins++;
-    const scoreP1 = document.getElementById('scoreP1');
-    scoreP1.textContent = p1wins;
+    document.getElementById('scoreP1').innerHTML = p1wins;
   }
   else{
     p2wins++;
-    const scoreP2 = document.getElementById('scoreP2')
-    scoreP2.textContent = p2wins;
+    document.getElementById('scoreP2').innerHTML = p2wins;
   }
 };
